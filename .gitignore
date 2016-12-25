@@ -1,0 +1,11 @@
+bin
+etc
+include
+lib/dtrace
+lib/node_modules
+lib/python2.7
+npm-debug.log
+share
+src
+pip-selfcheck.json
+.Python
