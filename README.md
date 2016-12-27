@@ -41,7 +41,7 @@
 
 3. Create a binary command that will help you in your project to link your env and trigger local dbs:
   ```
-   export VENV_APP=catapultenv && cp scripts/$VENV_APP.sh /usr/local/bin/$VENV_APP && chmod u+x /usr/local/bin/$VENV_APP
+   export VENV_APP=ctp && cp scripts/$VENV_APP.sh /usr/local/bin/$VENV_APP && chmod u+x /usr/local/bin/$VENV_APP
   ```
 
 ## Dev during your project
