@@ -1,4 +1,5 @@
 bin
+data
 etc
 include
 lib/dtrace

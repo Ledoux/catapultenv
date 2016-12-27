@@ -39,14 +39,19 @@
   cd lib && pip install -r requirements.txt && yarn
   ```
 
-3. Create a binary command that will help you in your project to link to your catapultenv
+3. Create a binary command that will help you in your project to link your env and trigger local dbs:
   ```
-   export VENV_APP=catapultenv && source bin/activate && touch $VENV_APP && echo "rm -rf node_modules && mkdir node_modules && ln -sf $VIRTUAL_ENV/lib/node_modules/* ./node_modules && rm -rf yarn.lock && yarn" >> $VENV_APP && chmod u+x $VENV_APP && mv $VENV_APP /usr/local/bin/$VENV_APP
+   export VENV_APP=catapultenv && cp scripts/$VENV_APP.sh /usr/local/bin/$VENV_APP && chmod u+x /usr/local/bin/$VENV_APP
   ```
 
-## Install one project
+## Dev during your project
 
-Simply do
+1. link
 ```
-catapultenv
+catapultenv link
+```
+
+2. data
+```
+catapultenv data
 ```
