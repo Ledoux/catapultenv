@@ -18,7 +18,7 @@
   ```
 
   ```
-  sudo npm install -g yarn ttab
+  sudo npm install -g yarn
   ```
 
 2. Install your catapultenv setup, python and node (via nodeenv)
@@ -31,7 +31,7 @@
   ```
 
   ```
-  ttab "source bin/activate && nodeenv -p --node=6.9.1"
+  source bin/activate && nodeenv -p --node=6.9.1
   ```
 
 3. Install your libs
