@@ -1,0 +1,8 @@
+{
+  "author": "Erwan Ledoux",
+  "license": "MIT",
+  "scripts": {
+    "link": "export VENV_APP=ctp && cp scripts/$VENV_APP.sh /usr/local/bin/$VENV_APP && chmod u+x /usr/local/bin/$VENV_APP"
+  },
+  "version": "0.0.1"
+}

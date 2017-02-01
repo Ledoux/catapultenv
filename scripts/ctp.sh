@@ -43,6 +43,10 @@ if [ "$1" = "deploy" ] || [ "$1" = "-d" ] ; then
     heroku apps:info
   fi
   if [ "$2" = "destroy" ] || [ "$2" = "-d" ] ; then
-    heroku apps:destroy --app $(heroku info | awk '$1 == "===" {print $2}')
+    if [ "$3" = "all" ] ; then
+      node lib/delete_heroku_apps.js
+    else
+      heroku apps:destroy --app $(heroku info | awk '$1 == "===" {print $3}')
+    fi
   fi
 fi
