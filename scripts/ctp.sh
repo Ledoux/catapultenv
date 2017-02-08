@@ -50,3 +50,9 @@ if [ "$1" = "deploy" ] || [ "$1" = "-d" ] ; then
     fi
   fi
 fi
+
+if [ "$1" = "registry" ] || [ "$1" = "-r" ] ; then
+  if [ "$2" = "public" ] || [ "$2" = "-p" ] ; then
+    npm set registry https://registry.npmjs.org
+  fi
+fi
