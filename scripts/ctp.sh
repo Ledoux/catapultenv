@@ -9,7 +9,7 @@ if [ "$1" = "install" ] || [ "$1" = "-i" ] ; then
   fi
 fi
 
-if [ "$1" = "data" ] ; then
+if [ "$1" = "data" ]; then
   if [ "$2" = "reset" ] || [ "$2" = "-r" ]; then
     mongo $3 --eval "db.$4.drop()" && \
     mongoimport --jsonArray --db $3 --collection $4 --file $VIRTUAL_ENV/data/json_data/$3/$4.json
@@ -20,7 +20,7 @@ if [ "$1" = "data" ] ; then
 fi
 
 if [ "$1" = "serve" ] || [ "$1" = "-s" ] ; then
-  if [ "$2" = "data" ] ; then
+  if [ "$2" = "data" ] || [ "$2" = "-d" ]; then
     ttab "mongod --dbpath $VIRTUAL_ENV/data/mongodb_data"
   fi
 fi

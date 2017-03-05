@@ -69,6 +69,7 @@
     "react-hot-loader": "^3.0.0-beta.1",
     "react-redux": "^4.4.5",
     "react-router": "^2.4.0",
+    "react-toggle": "^3.0.1",
     "rebass": "^0.2.6",
     "redux": "^3.5.2",
     "redux-responsive": "^4.1.1",

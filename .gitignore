@@ -1,6 +1,7 @@
 .DS_Store
 bin
-data
+data/mongodb_data/*
+data/rethinkdb_data/*
 etc
 include
 lib/dtrace
