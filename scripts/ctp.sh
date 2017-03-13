@@ -9,6 +9,10 @@ if [ "$1" = "install" ] || [ "$1" = "-i" ] ; then
   fi
 fi
 
+if [ "$1" = "link" ] || [ "$1" = "-l" ] ; then
+  sh $VIRTUAL_ENV/scripts/symlink.sh
+fi
+
 if [ "$1" = "serve" ] || [ "$1" = "-s" ] ; then
   if [ "$2" = "data" ] || [ "$2" = "-d" ]; then
     mongod --dbpath $VIRTUAL_ENV/data/mongodb_data
