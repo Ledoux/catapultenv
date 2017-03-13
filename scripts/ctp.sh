@@ -9,19 +9,9 @@ if [ "$1" = "install" ] || [ "$1" = "-i" ] ; then
   fi
 fi
 
-if [ "$1" = "data" ]; then
-  if [ "$2" = "reset" ] || [ "$2" = "-r" ]; then
-    mongo $3 --eval "db.$4.drop()" && \
-    mongoimport --jsonArray --db $3 --collection $4 --file $VIRTUAL_ENV/data/json_data/$3/$4.json
-  fi
-  if [ "$2" = "fetch" ] || [ "$2" = "-f" ]; then
-    mongo $2 --eval "JSON.stringify(db.$3.find().toArray())"
-  fi
-fi
-
 if [ "$1" = "serve" ] || [ "$1" = "-s" ] ; then
   if [ "$2" = "data" ] || [ "$2" = "-d" ]; then
-    ttab "mongod --dbpath $VIRTUAL_ENV/data/mongodb_data"
+    mongod --dbpath $VIRTUAL_ENV/data/mongodb_data
   fi
 fi
 
@@ -54,5 +44,15 @@ fi
 if [ "$1" = "registry" ] || [ "$1" = "-r" ] ; then
   if [ "$2" = "public" ] || [ "$2" = "-p" ] ; then
     npm set registry https://registry.npmjs.org
+  fi
+fi
+
+if [ "$1" = "data" ]; then
+  if [ "$2" = "reset" ] || [ "$2" = "-r" ]; then
+    mongo $3 --eval "db.$4.drop()" && \
+    mongoimport --jsonArray --db $3 --collection $4 --file $VIRTUAL_ENV/data/json_data/$3/$4.json
+  fi
+  if [ "$2" = "fetch" ] || [ "$2" = "-f" ]; then
+    mongo $2 --eval "JSON.stringify(db.$3.find().toArray())"
   fi
 fi
