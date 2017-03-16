@@ -13,3 +13,4 @@ src
 pip-selfcheck.json
 yarn-error.log
 .Python
+scripts/env.sh

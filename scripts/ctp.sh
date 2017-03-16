@@ -51,6 +51,14 @@ if [ "$1" = "registry" ] || [ "$1" = "-r" ] ; then
   fi
 fi
 
+if [ "$1" = "watch" ] || [ "$1" = "-w" ] ; then
+  sh $VIRTUAL_ENV/scripts/watch.sh
+fi
+
+if [ "$1" = "refresh" ] || [ "$1" = "-r" ] ; then
+  export VENV_APP=ctp && cp $VIRTUAL_ENV/scripts/$VENV_APP.sh /usr/local/bin/$VENV_APP && chmod u+x /usr/local/bin/$VENV_APP
+fi
+
 if [ "$1" = "data" ]; then
   if [ "$2" = "reset" ] || [ "$2" = "-r" ]; then
     mongo $3 --eval "db.$4.drop()" && \

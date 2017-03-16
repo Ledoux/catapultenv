@@ -1,12 +1,25 @@
-GIT_DIR=$VIRTUAL_ENV/../..
+source $VIRTUAL_ENV/scripts/env.sh
+
+echo "Create (or just check) the $VIRTUAL_ENV/lib/node_modules"
 mkdir -p $VIRTUAL_ENV/lib/node_modules
-for module_dir in Ledoux/entitiex Ledoux/filtex Ledoux/transactionx-client Ledoux/transactionx-express
+echo "Symlink inside all the $MODULE_DIRS"
+for module_dir in $MODULE_DIRS
 do
-  rm -rf $GIT_DIR/$module_dir/node_modules ; \
-  cd $VIRTUAL_ENV/lib/node_modules && ln -sf $GIT_DIR/$module_dir . ; \
-  cd $GIT_DIR/$module_dir && ctp -i -n
+  cd $VIRTUAL_ENV/lib/node_modules && ln -sf $GIT_DIR/$module_dir . ;
 done
-for app_dir in ClimateFeedback/fact-check-conpute ClimateFeedback/fact-check-conpute/backend/servers/express-webrouter
+echo "rm yarn.lock, node_modules in all the $MODULE_DIRS"
+for module_dir in $MODULE_DIRS
+do
+  rm -f $GIT_DIR/$module_dir/yarn.lock; \
+  rm -rf $GIT_DIR/$module_dir/node_modules;
+done
+echo "ctp -i -n in all the $MODULE_DIRS"
+for module_dir in $MODULE_DIRS
+do
+  cd $GIT_DIR/$module_dir && ctp -i -n;
+done
+echo "ctp -i -n in all the $APP_DIRS"
+for app_dir in $APP_DIRS
 do
   cd $GIT_DIR/$app_dir && ctp -i -n;
 done
