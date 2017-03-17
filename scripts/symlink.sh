@@ -16,10 +16,10 @@ done
 echo "ctp -i -n in all the $MODULE_DIRS"
 for module_dir in $MODULE_DIRS
 do
-  cd $GIT_DIR/$module_dir && ctp -i -n;
+  cd $GIT_DIR/$module_dir && echo "\nctp -i -n in $module_dir" && ctp -i -n;
 done
 echo "ctp -i -n in all the $APP_DIRS"
 for app_dir in $APP_DIRS
 do
-  cd $GIT_DIR/$app_dir && ctp -i -n;
+  cd $GIT_DIR/$app_dir && echo "\nctp -i -n in $app_dir" && ctp -i -n;
 done
