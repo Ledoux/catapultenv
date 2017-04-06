@@ -5,7 +5,8 @@ mkdir -p $VIRTUAL_ENV/lib/node_modules
 echo "Symlink inside all the $MODULE_DIRS"
 for module_dir in $MODULE_DIRS
 do
-  cd $VIRTUAL_ENV/lib/node_modules && ln -sf $GIT_DIR/$module_dir . ;
+  module_name=${module_dir##*/};
+  cd $VIRTUAL_ENV/lib/node_modules && rm -rf $module_name && ln -sf $GIT_DIR/$module_dir .;
 done
 echo "rm yarn.lock, node_modules in all the $MODULE_DIRS"
 for module_dir in $MODULE_DIRS
