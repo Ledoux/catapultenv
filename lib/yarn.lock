@@ -39,8 +39,8 @@
   resolved "https://registry.yarnpkg.com/@types/async/-/async-2.0.40.tgz#ac02de68e66c004a61b7cb16df8b1db3a254cca9"
 
 "@types/chai@^3.4.32":
-  version "3.4.35"
-  resolved "https://registry.yarnpkg.com/@types/chai/-/chai-3.4.35.tgz#e8d65f83492d2944f816fc620741821c28a8c900"
+  version "3.5.0"
+  resolved "https://registry.yarnpkg.com/@types/chai/-/chai-3.5.0.tgz#45e2dc2af9a5727be846af6e61d08ffc45d5b2ca"
 
 "@types/isomorphic-fetch@0.0.30":
   version "0.0.30"
@@ -467,8 +467,8 @@ ava@^0.18.2:
     update-notifier "^1.0.0"
 
 aws-sdk@^2.6.13:
-  version "2.40.0"
-  resolved "https://registry.yarnpkg.com/aws-sdk/-/aws-sdk-2.40.0.tgz#7af7410f0484c9ae0742017e217b39917ebbf8d0"
+  version "2.41.0"
+  resolved "https://registry.yarnpkg.com/aws-sdk/-/aws-sdk-2.41.0.tgz#930c15ae7ef4532bb8912c4c36a18b0023fd74c2"
   dependencies:
     buffer "4.9.1"
     crypto-browserify "1.0.9"
@@ -1417,8 +1417,8 @@ caniuse-api@^1.5.2:
     lodash.uniq "^4.5.0"
 
 caniuse-db@^1.0.30000187, caniuse-db@^1.0.30000529, caniuse-db@^1.0.30000634, caniuse-db@^1.0.30000639:
-  version "1.0.30000649"
-  resolved "https://registry.yarnpkg.com/caniuse-db/-/caniuse-db-1.0.30000649.tgz#1ee1754a6df235450c8b7cd15e0ebf507221a86a"
+  version "1.0.30000653"
+  resolved "https://registry.yarnpkg.com/caniuse-db/-/caniuse-db-1.0.30000653.tgz#123e112a29ce8f3199e4995d2d8b9d95492c5b41"
 
 capture-stack-trace@^1.0.0:
   version "1.0.0"
@@ -1931,6 +1931,13 @@ create-error-class@^3.0.1:
   resolved "https://registry.yarnpkg.com/create-error-class/-/create-error-class-3.0.2.tgz#06be7abef947a3f14a30fd610671d401bca8b7b6"
   dependencies:
     capture-stack-trace "^1.0.0"
+
+create-react-class@^15.5.1:
+  version "15.5.2"
+  resolved "https://registry.yarnpkg.com/create-react-class/-/create-react-class-15.5.2.tgz#6a8758348df660b88326a0e764d569f274aad681"
+  dependencies:
+    fbjs "^0.8.9"
+    object-assign "^4.1.1"
 
 cross-spawn@^0.2.3:
   version "0.2.9"
@@ -2725,9 +2732,13 @@ es6-map@^0.1.3:
     es6-symbol "~3.1.1"
     event-emitter "~0.3.5"
 
-es6-promise@3.2.1, es6-promise@^3.0.2:
+es6-promise@3.2.1:
   version "3.2.1"
   resolved "https://registry.yarnpkg.com/es6-promise/-/es6-promise-3.2.1.tgz#ec56233868032909207170c39448e24449dd1fc4"
+
+es6-promise@^3.0.2:
+  version "3.3.1"
+  resolved "https://registry.yarnpkg.com/es6-promise/-/es6-promise-3.3.1.tgz#a08cdde84ccdbf34d027a1451bc91d4bcd28a613"
 
 es6-promise@^4.1.0:
   version "4.1.0"
@@ -3383,8 +3394,8 @@ forever-agent@~0.6.1:
   resolved "https://registry.yarnpkg.com/forever-agent/-/forever-agent-0.6.1.tgz#fbc71f0c41adeb37f96c577ad1ed42d8fdacca91"
 
 form-data@~2.1.1:
-  version "2.1.2"
-  resolved "https://registry.yarnpkg.com/form-data/-/form-data-2.1.2.tgz#89c3534008b97eada4cbb157d58f6f5df025eae4"
+  version "2.1.4"
+  resolved "https://registry.yarnpkg.com/form-data/-/form-data-2.1.4.tgz#33c183acf193276ecaa98143a69e94bfee1750d1"
   dependencies:
     asynckit "^0.4.0"
     combined-stream "^1.0.5"
@@ -5655,8 +5666,8 @@ mongodb@2.2.25, "mongodb@>= 1.2.0 <3.0.0", mongodb@^2.2.11:
     readable-stream "2.1.5"
 
 mongoose@^4.1.9:
-  version "4.9.3"
-  resolved "https://registry.yarnpkg.com/mongoose/-/mongoose-4.9.3.tgz#7e3ea176ed7d3d23940368704834890595aea040"
+  version "4.9.4"
+  resolved "https://registry.yarnpkg.com/mongoose/-/mongoose-4.9.4.tgz#212be4597e2db57b05286cc53ee894f30f3d8fad"
   dependencies:
     async "2.1.4"
     bson "~1.0.4"
@@ -5752,8 +5763,8 @@ mysql@^2.13.0:
     sqlstring "2.2.0"
 
 nan@^2.3.0, nan@^2.3.2:
-  version "2.6.1"
-  resolved "https://registry.yarnpkg.com/nan/-/nan-2.6.1.tgz#8c84f7b14c96b89f57fbc838012180ec8ca39a01"
+  version "2.6.2"
+  resolved "https://registry.yarnpkg.com/nan/-/nan-2.6.2.tgz#e4ff34e6c95fdfb5aecc08de6596f43605a7db45"
 
 natives@^1.1.0:
   version "1.1.0"
@@ -6012,7 +6023,7 @@ object-assign@^3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/object-assign/-/object-assign-3.0.0.tgz#9bedd5ca0897949bca47e7ff408062d549f587f2"
 
-object-assign@^4, object-assign@^4.0.1, object-assign@^4.1.0:
+object-assign@^4, object-assign@^4.0.1, object-assign@^4.1.0, object-assign@^4.1.1:
   version "4.1.1"
   resolved "https://registry.yarnpkg.com/object-assign/-/object-assign-4.1.1.tgz#2109adc7965887cfc05cbbd442cac8bfbb360863"
 
@@ -6817,9 +6828,9 @@ promise@^7.1.1:
   dependencies:
     asap "~2.0.3"
 
-prop-types@^15.5.4:
-  version "15.5.4"
-  resolved "https://registry.yarnpkg.com/prop-types/-/prop-types-15.5.4.tgz#2ed3692716a5060f8cc020946d8238e7419d92c0"
+prop-types@^15.0.0, prop-types@^15.5.4:
+  version "15.5.8"
+  resolved "https://registry.yarnpkg.com/prop-types/-/prop-types-15.5.8.tgz#6b7b2e141083be38c8595aa51fc55775c7199394"
   dependencies:
     fbjs "^0.8.9"
 
@@ -7001,21 +7012,25 @@ react-proxy@^3.0.0-alpha.0:
     lodash "^4.6.1"
 
 react-redux@^5.0.3:
-  version "5.0.3"
-  resolved "https://registry.yarnpkg.com/react-redux/-/react-redux-5.0.3.tgz#86c3b68d56e74294a42e2a740ab66117ef6c019f"
+  version "5.0.4"
+  resolved "https://registry.yarnpkg.com/react-redux/-/react-redux-5.0.4.tgz#1563babadcfb2672f57f9ceaa439fb16bf85d55b"
   dependencies:
+    create-react-class "^15.5.1"
     hoist-non-react-statics "^1.0.3"
     invariant "^2.0.0"
     lodash "^4.2.0"
     lodash-es "^4.2.0"
     loose-envify "^1.1.0"
+    prop-types "^15.0.0"
 
 react-router-dom@^4.0.0:
-  version "4.0.0"
-  resolved "https://registry.yarnpkg.com/react-router-dom/-/react-router-dom-4.0.0.tgz#4fa4418e14b8cfc5bcc0bdea0c4083fb8c2aef10"
+  version "4.1.1"
+  resolved "https://registry.yarnpkg.com/react-router-dom/-/react-router-dom-4.1.1.tgz#3021ade1f2c160af97cf94e25594c5f294583025"
   dependencies:
     history "^4.5.1"
-    react-router "^4.0.0"
+    loose-envify "^1.3.1"
+    prop-types "^15.5.4"
+    react-router "^4.1.1"
 
 react-router-redux@next:
   version "5.0.0-alpha.4"
@@ -7024,14 +7039,16 @@ react-router-redux@next:
     history "^4.5.1"
     react-router "^4.0.0"
 
-react-router@^4.0.0:
-  version "4.0.0"
-  resolved "https://registry.yarnpkg.com/react-router/-/react-router-4.0.0.tgz#6532075231f0bb5077c2005c1d417ad6165b3997"
+react-router@^4.0.0, react-router@^4.1.1:
+  version "4.1.1"
+  resolved "https://registry.yarnpkg.com/react-router/-/react-router-4.1.1.tgz#d448f3b7c1b429a6fbb03395099949c606b1fe95"
   dependencies:
     history "^4.6.0"
+    hoist-non-react-statics "^1.2.0"
     invariant "^2.2.2"
     loose-envify "^1.3.1"
     path-to-regexp "^1.5.3"
+    prop-types "^15.5.4"
     warning "^3.0.0"
 
 react-side-effect@^1.1.0:
@@ -7182,11 +7199,12 @@ rechoir@^0.6.2:
     resolve "^1.1.6"
 
 redbox-react@^1.2.5:
-  version "1.3.5"
-  resolved "https://registry.yarnpkg.com/redbox-react/-/redbox-react-1.3.5.tgz#801d1d22f784d80fcab109b2174cbc169830435f"
+  version "1.3.6"
+  resolved "https://registry.yarnpkg.com/redbox-react/-/redbox-react-1.3.6.tgz#70314c57c066257eb70b0a24dc794b5cef4f1c4e"
   dependencies:
     error-stack-parser "^1.3.6"
     object-assign "^4.0.1"
+    prop-types "^15.5.4"
 
 redent@^1.0.0:
   version "1.0.0"
@@ -7881,8 +7899,8 @@ sqlstring@2.2.0:
   resolved "https://registry.yarnpkg.com/sqlstring/-/sqlstring-2.2.0.tgz#c3135c4ea8abcd7e7ee741a4966a891d86a4f191"
 
 sshpk@^1.7.0:
-  version "1.11.0"
-  resolved "https://registry.yarnpkg.com/sshpk/-/sshpk-1.11.0.tgz#2d8d5ebb4a6fab28ffba37fa62a90f4a3ea59d77"
+  version "1.13.0"
+  resolved "https://registry.yarnpkg.com/sshpk/-/sshpk-1.13.0.tgz#ff2a3e4fd04497555fed97b39a0fd82fafb3a33c"
   dependencies:
     asn1 "~0.2.3"
     assert-plus "^1.0.0"
@@ -8431,8 +8449,8 @@ tr46@~0.0.3:
   resolved "https://registry.yarnpkg.com/tr46/-/tr46-0.0.3.tgz#8184fd347dac9cdc185992f3a6622e14b9d9ab6a"
 
 transactions-express-rest-mongodb@latest:
-  version "0.1.1"
-  resolved "https://registry.yarnpkg.com/transactions-express-rest-mongodb/-/transactions-express-rest-mongodb-0.1.1.tgz#ebece214b920f8d806a240d35f70462fe01a815f"
+  version "0.1.3"
+  resolved "https://registry.yarnpkg.com/transactions-express-rest-mongodb/-/transactions-express-rest-mongodb-0.1.3.tgz#5303cbc2da6c50bac0502ed4fb44be6dbda5798f"
   dependencies:
     body-parser "^1.15.2"
     express "^4.14.0"
@@ -8442,16 +8460,16 @@ transactions-express-rest-mongodb@latest:
     transactions-express-rest latest
 
 transactions-express-rest@latest:
-  version "0.1.0"
-  resolved "https://registry.yarnpkg.com/transactions-express-rest/-/transactions-express-rest-0.1.0.tgz#e4f7469c12b126fff5618864ce72fa9a03b6fe8b"
+  version "0.1.2"
+  resolved "https://registry.yarnpkg.com/transactions-express-rest/-/transactions-express-rest-0.1.2.tgz#4df33809551ce2b2fbba9a9eb834765472cbeca4"
   dependencies:
     body-parser "^1.15.2"
     express "^4.14.0"
     transactions-tests latest
 
 transactions-redux-normalizer@latest:
-  version "0.0.13"
-  resolved "https://registry.yarnpkg.com/transactions-redux-normalizer/-/transactions-redux-normalizer-0.0.13.tgz#4e78852e0c5c62c704fb77957027c014bbe47487"
+  version "0.1.2"
+  resolved "https://registry.yarnpkg.com/transactions-redux-normalizer/-/transactions-redux-normalizer-0.1.2.tgz#77787ac1beeed819ff2c1656309118298d17856d"
   dependencies:
     immutable "3.8.1"
     lodash.isequal "^4.5.0"
@@ -8466,8 +8484,8 @@ transactions-redux-normalizer@latest:
     transactions-tests latest
 
 transactions-redux-reselector@latest:
-  version "0.0.8"
-  resolved "https://registry.yarnpkg.com/transactions-redux-reselector/-/transactions-redux-reselector-0.0.8.tgz#a79e6f6a6dcf61ce768d8706f054166f33501ac8"
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/transactions-redux-reselector/-/transactions-redux-reselector-0.1.0.tgz#5e5cd959be46d4815382a984312fbf1d21087620"
   dependencies:
     lodash.merge "^4.6.0"
     lodash.values "^4.3.0"
@@ -8479,8 +8497,8 @@ transactions-redux-reselector@latest:
     transactions-tests latest
 
 transactions-redux-saga@latest:
-  version "0.1.4"
-  resolved "https://registry.yarnpkg.com/transactions-redux-saga/-/transactions-redux-saga-0.1.4.tgz#b766555ecd04ce748b1b9c1edf449051fc1839dd"
+  version "0.1.7"
+  resolved "https://registry.yarnpkg.com/transactions-redux-saga/-/transactions-redux-saga-0.1.7.tgz#9864aa784dae6387686b296b97f22d49fbe19bcd"
   dependencies:
     es6-promise "^4.1.0"
     immutable "3.8.1"
@@ -8899,8 +8917,8 @@ webpack-sources@^0.1.0:
     source-map "~0.5.3"
 
 webpack@^1.13.0:
-  version "1.14.0"
-  resolved "https://registry.yarnpkg.com/webpack/-/webpack-1.14.0.tgz#54f1ffb92051a328a5b2057d6ae33c289462c823"
+  version "1.15.0"
+  resolved "https://registry.yarnpkg.com/webpack/-/webpack-1.15.0.tgz#4ff31f53db03339e55164a9d468ee0324968fe98"
   dependencies:
     acorn "^3.0.0"
     async "^1.3.0"
@@ -9081,9 +9099,16 @@ write@^0.2.1:
   dependencies:
     mkdirp "^0.5.1"
 
-ws@1.1.2, ws@^1.0.1:
+ws@1.1.2:
   version "1.1.2"
   resolved "https://registry.yarnpkg.com/ws/-/ws-1.1.2.tgz#8a244fa052401e08c9886cf44a85189e1fd4067f"
+  dependencies:
+    options ">=0.0.5"
+    ultron "1.0.x"
+
+ws@^1.0.1:
+  version "1.1.4"
+  resolved "https://registry.yarnpkg.com/ws/-/ws-1.1.4.tgz#57f40d036832e5f5055662a397c4de76ed66bf61"
   dependencies:
     options ">=0.0.5"
     ultron "1.0.x"
