@@ -1,3 +1,4 @@
+apscheduler==3.3.1
 arrow==0.6.0
 awscli==1.11.45
 boto==2.41.0
