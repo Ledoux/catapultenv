@@ -68,3 +68,14 @@ if [ "$1" = "data" ]; then
     mongo $2 --eval "JSON.stringify(db.$3.find().toArray())"
   fi
 fi
+
+if [ "$1" = "docker" ]; then
+  if [ "$2" = "clean" ]; then
+    docker stop $(docker ps -a -q) && \
+    docker ps -a | grep 'Exited\|Created' | cut -d ' ' -f 1 | xargs docker rm && \
+    docker rmi $(docker images -f "dangling=true" -q)
+  fi
+  if [ "$2" = "ip" ]; then
+    echo $(ifconfig | grep -E "([0-9]{1,3}\.){3}[0-9]{1,3}" | grep -v 127.0.0.1 | awk '{ print $2 }' | cut -f2 -d: | head -n1)
+  fi
+fi
