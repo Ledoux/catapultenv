@@ -9,6 +9,10 @@ if [ "$1" = "install" ] || [ "$1" = "-i" ] ; then
   fi
 fi
 
+if [ "$1" = "kill" ] || [ "$1" = "-k" ] ; then
+  kill -9 $(lsof -i TCP:$2 | grep LISTEN | awk '{print $2}')
+fi
+
 if [ "$1" = "link" ] || [ "$1" = "-l" ] ; then
   sh $VIRTUAL_ENV/scripts/symlink.sh
 fi
