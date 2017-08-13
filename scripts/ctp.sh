@@ -3,6 +3,9 @@ if [ "$1" = "install" ] || [ "$1" = "-i" ] ; then
     rm -rf node_modules && mkdir node_modules && \
     ln -sf $VIRTUAL_ENV/lib/node_modules/* ./node_modules && \
     rm -rf yarn.lock && yarn
+    if [[ -d "backend/servers/express-webrouter" ]]; then
+      cd backend/servers/express-webrouter && ctp -i -n
+    fi
   fi
   if [ "$2" = "python" ] || [ "$2" = "-p" ]; then
     pip install -r requirements.txt
@@ -15,12 +18,6 @@ fi
 
 if [ "$1" = "link" ] || [ "$1" = "-l" ] ; then
   sh $VIRTUAL_ENV/scripts/symlink.sh
-fi
-
-if [ "$1" = "serve" ] || [ "$1" = "-s" ] ; then
-  if [ "$2" = "data" ] || [ "$2" = "-d" ]; then
-    mongod --dbpath $VIRTUAL_ENV/data/mongodb_data
-  fi
 fi
 
 if [ "$1" = "deploy" ] || [ "$1" = "-d" ] ; then
@@ -63,13 +60,19 @@ if [ "$1" = "refresh" ] || [ "$1" = "-r" ] ; then
   export VENV_APP=ctp && cp $VIRTUAL_ENV/scripts/$VENV_APP.sh /usr/local/bin/$VENV_APP && chmod u+x /usr/local/bin/$VENV_APP
 fi
 
-if [ "$1" = "data" ]; then
+if [ "$1" = "mongo" ] || [ "$1" = "-m" ]; then
+  if [ "$2" = "start" ] || [ "$2" = "-s" ]; then
+    mongod --dbpath $VIRTUAL_ENV/data/mongodb_data
+  fi
   if [ "$2" = "reset" ] || [ "$2" = "-r" ]; then
     mongo $3 --eval "db.$4.drop()" && \
     mongoimport --jsonArray --db $3 --collection $4 --file $VIRTUAL_ENV/data/json_data/$3/$4.json
   fi
   if [ "$2" = "fetch" ] || [ "$2" = "-f" ]; then
     mongo $2 --eval "JSON.stringify(db.$3.find().toArray())"
+  fi
+  if [ "$2" = "kill" ] || [ "$2" = "-k" ]; then
+    kill -2 `pgrep mongod`
   fi
 fi
 
