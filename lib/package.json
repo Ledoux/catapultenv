@@ -146,6 +146,8 @@
     "transactions-express-socketio": "latest",
     "transactions-interface-state": "latest",
     "transactions-interface-web": "latest",
+    "transactions-media-state": "latest",
+    "transactions-media-web": "latest",
     "transactions-redux-normalizer": "latest",
     "transactions-redux-request": "latest",
     "transactions-redux-reselector": "latest",
@@ -156,6 +158,7 @@
     "url-loader": "^0.5.8",
     "url-slug": "^2.0.0",
     "webpack": "^3.3.0",
+    "webpack-bundle-analyzer": "^2.9.0",
     "webpack-dev-server": "2.4.2",
     "webpage": "^0.3.0",
     "webshot": "^0.18.0",
@@ -165,8 +168,8 @@
   },
   "license": "MIT",
   "scripts": {
-    "link": "ctp -l",
-    "resolve-dependencies": "rm -rf node_modules/css-loader/node_modules/loader-utils && rm -rf node_modules/sass-loader/node_modules/loader-utils && rm -rf node_modules/file-loader/node_modules/loader-utils && rm -rf node_modules/url-loader/node_modules/loader-utils",
+    "link": "ctp -l -a",
+    "resolve-dependencies": "rm -rf node_modules/css-loader/node_modules/loader-utils && rm -rf node_modules/sass-loader/node_modules/loader-utils && rm -rf node_modules/postcss-loader/node_modules/loader-utils && rm -rf node_modules/file-loader/node_modules/loader-utils && rm -rf node_modules/url-loader/node_modules/loader-utils",
     "postinstall": "npm run link && npm run resolve-dependencies"
   },
   "version": "0.0.1"

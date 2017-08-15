@@ -1,10 +1,19 @@
 if [ "$1" = "install" ] || [ "$1" = "-i" ] ; then
   if [ "$2" = "node" ] || [ "$2" = "-n" ]; then
-    rm -rf node_modules && mkdir node_modules && \
-    ln -sf $VIRTUAL_ENV/lib/node_modules/* ./node_modules && \
-    rm -rf yarn.lock && yarn
+    if [ "$3" = "all" ] || [ "$3" = "-a" ]; then
+      for module_dir in $MODULE_DIRS
+      do
+        cd $GIT_DIR/$module_dir && echo "\nctp -i -n in $module_dir" && ctp -i -n;
+      done
+      echo "ctp -i -n in all the $APP_DIRS"
+      for app_dir in $APP_DIRS
+      do
+        cd $GIT_DIR/$app_dir && echo "\nctp -i -n in $app_dir" && ctp -i -n;
+      done
+    fi
+    ctp -l && rm -rf yarn.lock && yarn
     if [[ -d "backend/servers/express-webrouter" ]]; then
-      cd backend/servers/express-webrouter && ctp -i -n
+      cd backend/servers/express-webrouter && ctp -l && ctp -i
     fi
   fi
   if [ "$2" = "python" ] || [ "$2" = "-p" ]; then
@@ -17,7 +26,30 @@ if [ "$1" = "kill" ] || [ "$1" = "-k" ] ; then
 fi
 
 if [ "$1" = "link" ] || [ "$1" = "-l" ] ; then
-  sh $VIRTUAL_ENV/scripts/symlink.sh
+  source $VIRTUAL_ENV/scripts/env.sh
+  if [ "$2" = "replace" ] || [ "$2" = "-r" ]; then
+    echo "Create (or just check) the $VIRTUAL_ENV/lib/node_modules"
+    mkdir -p $VIRTUAL_ENV/lib/node_modules
+    echo "Symlink inside all the $MODULE_DIRS"
+    for module_dir in $MODULE_DIRS
+    do
+      module_name=${module_dir##*/};
+      cd $VIRTUAL_ENV/lib/node_modules && rm -rf $module_name && ln -sf $GIT_DIR/$module_dir .;
+    done
+  fi
+  if [ "$2" = "all" ] || [ "$2" = "-a" ]; then
+    for module_dir in $MODULE_DIRS
+    do
+      cd $GIT_DIR/$module_dir && echo "\nctp -l in $module_dir" && ctp -l;
+    done
+    echo "ctp -l in all the $APP_DIRS"
+    for app_dir in $APP_DIRS
+    do
+      cd $GIT_DIR/$app_dir && echo "\nctp -l in $app_dir" && ctp -l;
+    done
+  fi
+  rm -rf node_modules && mkdir node_modules && \
+  ln -sf $VIRTUAL_ENV/lib/node_modules/* ./node_modules
 fi
 
 if [ "$1" = "deploy" ] || [ "$1" = "-d" ] ; then
@@ -53,7 +85,14 @@ if [ "$1" = "registry" ] || [ "$1" = "-r" ] ; then
 fi
 
 if [ "$1" = "watch" ] || [ "$1" = "-w" ] ; then
-  sh $VIRTUAL_ENV/scripts/watch.sh
+  source $VIRTUAL_ENV/scripts/env.sh
+  CONCURRENTLY_CMD="$VIRTUAL_ENV/lib/node_modules/.bin/concurrently"
+  for module_dir in $MODULE_DIRS
+  do
+    CONCURRENTLY_CMD=$CONCURRENTLY_CMD" \"cd $GIT_DIR/$module_dir && npm run compile && npm run dev-watch\"" ;
+  done
+  echo $CONCURRENTLY_CMD
+  eval $CONCURRENTLY_CMD
 fi
 
 if [ "$1" = "refresh" ] || [ "$1" = "-r" ] ; then
