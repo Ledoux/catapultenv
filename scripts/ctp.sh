@@ -33,8 +33,8 @@ if [ "$1" = "link" ] || [ "$1" = "-l" ] ; then
     echo "Symlink inside all the $MODULE_DIRS"
     for module_dir in $MODULE_DIRS
     do
-      module_name=${module_dir##*/};
-      cd $VIRTUAL_ENV/lib/node_modules && rm -rf $module_name && ln -sf $GIT_DIR/$module_dir .;
+      module_name=$(cd $GIT_DIR/$module_dir && cat package.json | grep 'name":' | head -1 | awk -F: '{ print $2 }' | sed 's/[",]//g' | tr -d '[[:space:]]');
+      cd $VIRTUAL_ENV/lib/node_modules && rm -rf $module_name && ln -sf $GIT_DIR/$module_dir $module_name;
     done
   fi
   if [ "$2" = "all" ] || [ "$2" = "-a" ]; then
@@ -95,13 +95,9 @@ if [ "$1" = "watch" ] || [ "$1" = "-w" ] ; then
   eval $CONCURRENTLY_CMD
 fi
 
-if [ "$1" = "refresh" ] || [ "$1" = "-r" ] ; then
-  export VENV_APP=ctp && cp $VIRTUAL_ENV/scripts/$VENV_APP.sh /usr/local/bin/$VENV_APP && chmod u+x /usr/local/bin/$VENV_APP
-fi
-
 if [ "$1" = "mongo" ] || [ "$1" = "-m" ]; then
   if [ "$2" = "start" ] || [ "$2" = "-s" ]; then
-    mongod --dbpath $VIRTUAL_ENV/data/mongodb_data
+    ctp -m -k && sleep 1 && mongod --dbpath $VIRTUAL_ENV/data/mongodb_data
   fi
   if [ "$2" = "reset" ] || [ "$2" = "-r" ]; then
     mongo $3 --eval "db.$4.drop()" && \
