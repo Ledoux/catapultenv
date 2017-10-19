@@ -49,8 +49,7 @@ if [ "$1" = "link" ] || [ "$1" = "-l" ] ; then
     done
   fi
   rm -rf node_modules && mkdir node_modules && \
-  ln -sf $VIRTUAL_ENV/lib/node_modules/* ./node_modules && \
-  ln -sf $VIRTUAL_ENV/lib/node_modules/.bin ./node_modules
+  ln -sf $VIRTUAL_ENV/lib/node_modules/* ./node_modules
 fi
 
 if [ "$1" = "deploy" ] || [ "$1" = "-d" ] ; then
