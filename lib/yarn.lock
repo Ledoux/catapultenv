@@ -43,8 +43,8 @@
   resolved "https://registry.yarnpkg.com/@types/error-stack-parser/-/error-stack-parser-1.3.18.tgz#e01c9f8c85ca83b610320c62258b0c9026ade0f7"
 
 "@types/lodash@^4.14.72":
-  version "4.14.77"
-  resolved "https://registry.yarnpkg.com/@types/lodash/-/lodash-4.14.77.tgz#0bc699413e84d6ed5d927ca30ea0f0a890b42d75"
+  version "4.14.78"
+  resolved "https://registry.yarnpkg.com/@types/lodash/-/lodash-4.14.78.tgz#f26a0b38a44a832c652964803c7e48be05939d3f"
 
 "@types/node@^6.0.46":
   version "6.0.90"
@@ -531,8 +531,8 @@ ava@^0.18.2:
     update-notifier "^1.0.0"
 
 aws-sdk@^2.6.13:
-  version "2.135.0"
-  resolved "https://registry.yarnpkg.com/aws-sdk/-/aws-sdk-2.135.0.tgz#81f4a47b99212f2f236bf5b11b0b3a3a02086db4"
+  version "2.137.0"
+  resolved "https://registry.yarnpkg.com/aws-sdk/-/aws-sdk-2.137.0.tgz#2abbdc2b8642afd0786a17635d9488cc87791171"
   dependencies:
     buffer "4.9.1"
     crypto-browserify "1.0.9"
@@ -1593,8 +1593,8 @@ browser-resolve@^1.11.2:
     resolve "1.1.7"
 
 browserify-aes@^1.0.0, browserify-aes@^1.0.4:
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/browserify-aes/-/browserify-aes-1.1.0.tgz#1d2ad62a8b479f23f0ab631c1be86a82dbccbe48"
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/browserify-aes/-/browserify-aes-1.1.1.tgz#38b7ab55edb806ff2dcda1a7f1620773a477c49f"
   dependencies:
     buffer-xor "^1.0.3"
     cipher-base "^1.0.0"
@@ -2649,8 +2649,8 @@ cssom@0.3.x, "cssom@>= 0.3.2 < 0.4.0", cssom@^0.3.2:
     cssom "0.3.x"
 
 csv-parse@^1.2.0:
-  version "1.2.4"
-  resolved "https://registry.yarnpkg.com/csv-parse/-/csv-parse-1.2.4.tgz#cbf676e355226625888c6432400b83f07e75cc2e"
+  version "1.3.3"
+  resolved "https://registry.yarnpkg.com/csv-parse/-/csv-parse-1.3.3.tgz#d1cfd8743c2f849a0abb2fd544db56695d19a490"
 
 currently-unhandled@^0.4.1:
   version "0.4.1"
@@ -3138,9 +3138,16 @@ domhandler@^2.3.0:
   dependencies:
     domelementtype "1"
 
-domutils@1.5.1, domutils@^1.5.1:
+domutils@1.5.1:
   version "1.5.1"
   resolved "https://registry.yarnpkg.com/domutils/-/domutils-1.5.1.tgz#dcd8488a26f563d61079e48c9f7b7e32373682cf"
+  dependencies:
+    dom-serializer "0"
+    domelementtype "1"
+
+domutils@^1.5.1:
+  version "1.6.2"
+  resolved "https://registry.yarnpkg.com/domutils/-/domutils-1.6.2.tgz#1958cc0b4c9426e9ed367fb1c8e854891b0fa3ff"
   dependencies:
     dom-serializer "0"
     domelementtype "1"
@@ -3321,8 +3328,8 @@ ejs@^2.5.6:
   resolved "https://registry.yarnpkg.com/ejs/-/ejs-2.5.7.tgz#cc872c168880ae3c7189762fd5ffc00896c9518a"
 
 electron-to-chromium@^1.2.7, electron-to-chromium@^1.3.24:
-  version "1.3.26"
-  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.3.26.tgz#996427294861a74d9c7c82b9260ea301e8c02d66"
+  version "1.3.27"
+  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.3.27.tgz#78ecb8a399066187bb374eede35d9c70565a803d"
 
 elegant-spinner@^1.0.1:
   version "1.0.1"
@@ -4810,7 +4817,7 @@ highlight.js@9.8.0:
   version "9.8.0"
   resolved "https://registry.yarnpkg.com/highlight.js/-/highlight.js-9.8.0.tgz#38eeef40cd45eaddbec8c9e5238fb7a783a3b685"
 
-history@^4.6.1, history@^4.7.2:
+history@^4.5.1, history@^4.6.1, history@^4.7.2:
   version "4.7.2"
   resolved "https://registry.yarnpkg.com/history/-/history-4.7.2.tgz#22b5c7f31633c5b8021c7f4a8a954ac139ee8d5b"
   dependencies:
@@ -5730,6 +5737,10 @@ js-beautify@^1.6.14:
     editorconfig "^0.13.2"
     mkdirp "~0.5.0"
     nopt "~3.0.1"
+
+js-combinatorics@^0.5.2:
+  version "0.5.2"
+  resolved "https://registry.yarnpkg.com/js-combinatorics/-/js-combinatorics-0.5.2.tgz#f060749232ea1b770076ff97aed6cfa9ab41b8f4"
 
 js-tokens@^3.0.0, js-tokens@^3.0.2:
   version "3.0.2"
@@ -8445,15 +8456,22 @@ react-router-dom@^4.0.0, react-router-dom@^4.1.1:
     react-router "^4.2.0"
     warning "^3.0.0"
 
+react-router-redux@5.0.0-alpha.4:
+  version "5.0.0-alpha.4"
+  resolved "https://registry.yarnpkg.com/react-router-redux/-/react-router-redux-5.0.0-alpha.4.tgz#0f64a8633ee78e14ee3eb96c6354ee134aa6ce4f"
+  dependencies:
+    history "^4.5.1"
+    react-router "^4.0.0"
+
 react-router-redux@next:
-  version "5.0.0-alpha.7"
-  resolved "https://registry.yarnpkg.com/react-router-redux/-/react-router-redux-5.0.0-alpha.7.tgz#0b4acd052f41c42d0ab7fd89966d587cd35ca165"
+  version "5.0.0-alpha.8"
+  resolved "https://registry.yarnpkg.com/react-router-redux/-/react-router-redux-5.0.0-alpha.8.tgz#5242c705730b2ac862aff7a8e90f870d0cf45e12"
   dependencies:
     history "^4.7.2"
     prop-types "^15.6.0"
     react-router "^4.2.0"
 
-react-router@^4.1.1, react-router@^4.2.0:
+react-router@^4.0.0, react-router@^4.1.1, react-router@^4.2.0:
   version "4.2.0"
   resolved "https://registry.yarnpkg.com/react-router/-/react-router-4.2.0.tgz#61f7b3e3770daeb24062dae3eedef1b054155986"
   dependencies:
@@ -10347,8 +10365,8 @@ transactions-authorization-web@latest:
     transactions-interface-web latest
 
 transactions-cms-state@latest:
-  version "0.0.9"
-  resolved "https://registry.yarnpkg.com/transactions-cms-state/-/transactions-cms-state-0.0.9.tgz#2e5ad2777dd873361409bd1fc5645fa5d2c19427"
+  version "0.0.10"
+  resolved "https://registry.yarnpkg.com/transactions-cms-state/-/transactions-cms-state-0.0.10.tgz#cfbb01ed93812153646096647aae605004adc483"
   dependencies:
     classnames "2.2.5"
     lodash.flatten "^4.4.0"
@@ -10367,8 +10385,8 @@ transactions-cms-state@latest:
     transactions-redux-request latest
 
 transactions-cms-web@latest:
-  version "0.0.12"
-  resolved "https://registry.yarnpkg.com/transactions-cms-web/-/transactions-cms-web-0.0.12.tgz#af915a4df93e1e740770d6b8e0d66fb25b7a8ce9"
+  version "0.0.13"
+  resolved "https://registry.yarnpkg.com/transactions-cms-web/-/transactions-cms-web-0.0.13.tgz#046dcd54f086821ffc474d87b2d6e804cae1a1c8"
   dependencies:
     classnames "2.2.5"
     pluralize "^3.0.0"
@@ -10393,16 +10411,16 @@ transactions-d3-graph@latest:
     react "15.5.4"
 
 transactions-demos-todos@latest:
-  version "0.0.1"
-  resolved "https://registry.yarnpkg.com/transactions-demos-todos/-/transactions-demos-todos-0.0.1.tgz#9e18cd0f276b0cf3fab4a168a3b952f20e21caba"
+  version "0.0.2"
+  resolved "https://registry.yarnpkg.com/transactions-demos-todos/-/transactions-demos-todos-0.0.2.tgz#bc1c24dadbd8780ed12115c0d2b2f6ea64eb52d8"
   dependencies:
     ejs "^1.0.0"
     express "^4.14.0"
     mongodb "^2.2.11"
     redux "^3.6.0"
     redux-saga "^0.15.3"
+    transactions-express-data latest
     transactions-express-rest-mongodb latest
-    transactions-redux-normalizer latest
     transactions-tests latest
 
 transactions-description-definition@latest:
@@ -10439,9 +10457,13 @@ transactions-express-aws@latest:
     mime-types "^2.1.15"
     multer "^1.3.0"
 
+transactions-express-conditions@latest:
+  version "0.0.1"
+  resolved "https://registry.yarnpkg.com/transactions-express-conditions/-/transactions-express-conditions-0.0.1.tgz#624a0072d0d856d2aef7c3d6405e8b26c8fdeb77"
+
 transactions-express-data@latest:
-  version "0.0.14"
-  resolved "https://registry.yarnpkg.com/transactions-express-data/-/transactions-express-data-0.0.14.tgz#69b465a10905f775a7d1045e88d51cff5551d3b7"
+  version "0.0.15"
+  resolved "https://registry.yarnpkg.com/transactions-express-data/-/transactions-express-data-0.0.15.tgz#b7f1b9f3cfdd4e9db50120bcf14c2c2f4633aab5"
   dependencies:
     aws-sdk "^2.6.13"
     grab-dans-tes-mains latest
@@ -10449,6 +10471,7 @@ transactions-express-data@latest:
     lodash.kebabcase "^4.1.1"
     lodash.keyby "^4.6.0"
     mime-types "^2.1.15"
+    moment "^2.19.1"
     mongodb "^2.2.11"
     multer "^1.3.0"
     node-dir "^0.1.17"
@@ -10491,8 +10514,8 @@ transactions-express-passport@latest:
     shortid "^2.2.6"
 
 transactions-express-rest-mongodb@latest:
-  version "0.1.29"
-  resolved "https://registry.yarnpkg.com/transactions-express-rest-mongodb/-/transactions-express-rest-mongodb-0.1.29.tgz#6d4939581217e30805cf2d683fb55335564da874"
+  version "0.1.30"
+  resolved "https://registry.yarnpkg.com/transactions-express-rest-mongodb/-/transactions-express-rest-mongodb-0.1.30.tgz#408eccf6a1e239ca0b177f15599a9d0eada07228"
   dependencies:
     express "^4.14.0"
     lodash.flatten "^4.4.0"
@@ -10502,8 +10525,8 @@ transactions-express-rest-mongodb@latest:
     transactions-express-rest latest
 
 transactions-express-rest@latest:
-  version "0.1.23"
-  resolved "https://registry.yarnpkg.com/transactions-express-rest/-/transactions-express-rest-0.1.23.tgz#2e4832b785e17b14f369cfdfe8b06c70014a751f"
+  version "0.1.24"
+  resolved "https://registry.yarnpkg.com/transactions-express-rest/-/transactions-express-rest-0.1.24.tgz#3109024b66914a82721e55d9e812418a35fdd429"
   dependencies:
     body-parser "^1.17.2"
     express "^4.14.0"
@@ -10564,8 +10587,8 @@ transactions-interface-web@latest:
     transactions-user-web latest
 
 transactions-media-state@latest:
-  version "0.0.7"
-  resolved "https://registry.yarnpkg.com/transactions-media-state/-/transactions-media-state-0.0.7.tgz#ca8784e51e9f2aa858462b5422bed9a3ff0b2f1b"
+  version "0.0.8"
+  resolved "https://registry.yarnpkg.com/transactions-media-state/-/transactions-media-state-0.0.8.tgz#ddbc9c723aacdb013d41314b313bdfab91561a48"
   dependencies:
     classnames "2.2.5"
     prop-types "^15.5.4"
@@ -10578,8 +10601,8 @@ transactions-media-state@latest:
     transactions-redux-package latest
 
 transactions-media-web@latest:
-  version "0.0.12"
-  resolved "https://registry.yarnpkg.com/transactions-media-web/-/transactions-media-web-0.0.12.tgz#aa879526b05caa9861e70ce37eadbfbd0ed1f1af"
+  version "0.0.13"
+  resolved "https://registry.yarnpkg.com/transactions-media-web/-/transactions-media-web-0.0.13.tgz#d96d8e2a0cd9c288d682d263b98b0a9aac6cd919"
   dependencies:
     classnames "2.2.5"
     js-beautify "^1.6.14"
@@ -10600,8 +10623,8 @@ transactions-media-web@latest:
     url-slug "^2.0.0"
 
 transactions-query-encode@latest:
-  version "0.0.7"
-  resolved "https://registry.yarnpkg.com/transactions-query-encode/-/transactions-query-encode-0.0.7.tgz#70dc5c0534245ce260d7a0ad0128fcdc217ae2bb"
+  version "0.0.8"
+  resolved "https://registry.yarnpkg.com/transactions-query-encode/-/transactions-query-encode-0.0.8.tgz#ce2848ad82ff77e19bc9e076dba6dd31255cdb93"
   dependencies:
     lodash.camelcase "^4.3.0"
 
@@ -10616,8 +10639,8 @@ transactions-redux-normalizer@latest:
     transactions-redux-package latest
 
 transactions-redux-package@latest:
-  version "0.0.2"
-  resolved "https://registry.yarnpkg.com/transactions-redux-package/-/transactions-redux-package-0.0.2.tgz#719c0fd6e6e35d019e37b52dd0fb07a44485fbea"
+  version "0.0.3"
+  resolved "https://registry.yarnpkg.com/transactions-redux-package/-/transactions-redux-package-0.0.3.tgz#14b8c23b0323106607c1d45e7a656472ce7da606"
   dependencies:
     immutable "3.8.1"
     lodash.keyby "^4.6.0"
