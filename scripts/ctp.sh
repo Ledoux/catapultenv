@@ -21,6 +21,10 @@ if [ "$1" = "install" ] || [ "$1" = "-i" ] ; then
   fi
 fi
 
+if [ "$1" = "github" ] || [ "$1" = '-g' ] ; then
+  find . -maxdepth 1 -mindepth 1 -type d -exec sh -c '(echo {} && cd {} && git status -s && echo)' \;
+fi
+
 if [ "$1" = "kill" ] || [ "$1" = "-k" ] ; then
   kill -9 $(lsof -i TCP:$2 | grep LISTEN | awk '{print $2}')
 fi
@@ -46,6 +50,9 @@ if [ "$1" = "link" ] || [ "$1" = "-l" ] ; then
     for app_dir in $APP_DIRS
     do
       cd $GIT_DIR/$app_dir && echo "\nctp -l in $app_dir" && ctp -l;
+      if [[ -d "backend/servers/express-webrouter" ]]; then
+        cd backend/servers/express-webrouter && ctp -l
+      fi
     done
   fi
   rm -rf node_modules && mkdir node_modules && \
@@ -82,6 +89,10 @@ if [ "$1" = "registry" ] || [ "$1" = "-r" ] ; then
   if [ "$2" = "public" ] || [ "$2" = "-p" ] ; then
     npm set registry https://registry.npmjs.org
   fi
+fi
+
+if [ "$1" = "scrap" ] || [ "$1" = "-s" ] ; then
+  wget -p --mirror --convert-links $2
 fi
 
 if [ "$1" = "watch" ] || [ "$1" = "-w" ] ; then
