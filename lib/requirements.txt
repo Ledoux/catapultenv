@@ -9,11 +9,13 @@ docker==2.3.0
 eventlet==0.18.4
 Flask==0.11.1
 Flask-Admin==1.0.8
+flask_cors==3.0.3
 Flask-Login==0.2.11
 Flask-Principal==0.4.0
 Flask-Script==2.0.5
 Flask-Security==1.7.3
 flask-socketio==2.1
+flask_sqlalchemy==2.3.2
 flask_graphql==1.4.0
 Flask-WTF==0.10.0
 google-api-python-client==1.1
@@ -23,6 +25,7 @@ gunicorn==19.4.5
 hyperopt==0.0.2
 inflect==0.2.5
 inlinestyler==0.2.1
+isbnlib==3.7.3
 itsdangerous==0.24
 Jinja2==2.8
 lxml==3.3.5
@@ -30,8 +33,10 @@ matplotlib==1.5.3
 networkx==1.11
 newspaper==0.1.0.7
 nltk==3.2.3
+panda==0.3.1
 progressbar==2.3
 Pillow==2.5.1
+psycopg2
 PyYAML==3.12
 pymongo==3.3.0
 pytz==2015.7
@@ -40,6 +45,7 @@ rethinkdb==2.3.0.post6
 scikit-learn==0.18
 scholarly===0.2.3
 seaborn==0.7.1
+simplejson==3.13.2
 six==1.11.0
 uwsgi==2.0.14
 WTForms==1.0.5
