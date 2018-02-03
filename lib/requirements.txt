@@ -33,7 +33,7 @@ matplotlib==1.5.3
 networkx==1.11
 newspaper==0.1.0.7
 nltk==3.2.3
-panda==0.3.1
+pandas==0.22.0
 progressbar==2.3
 Pillow==2.5.1
 psycopg2

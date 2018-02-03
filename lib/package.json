@@ -113,6 +113,8 @@
     "postcss-loader": "^2.0.5",
     "prop-types": "^15.5.4",
     "protractor": "^5.1.1",
+    "qhistory": "^1.0.0",
+    "qs": "^6.5.1",
     "react": "^16.0.0",
     "react-addons-shallow-compare": "^15.6.0",
     "react-debounce-input": "^3.0.0",
