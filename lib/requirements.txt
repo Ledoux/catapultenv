@@ -1,3 +1,4 @@
+alembic==0.9.7
 apscheduler==3.3.1
 arrow==0.6.0
 awscli==1.11.45
